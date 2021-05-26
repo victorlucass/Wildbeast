@@ -8,7 +8,7 @@ body {
 }
 
 img {
-    max-width: 100px;
+    max-width: 100%;
 }
 
 
@@ -44,6 +44,29 @@ a {
 
 .wb-logo {
     max-width: 200px;
+}
+
+.wb-header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wb-header nav a {
+    display: block;
+    padding: 10px;
+    background: rgb(0,0,0,.1);
+    color: white;
+    font-size: 1.125rem;
+    transition: .1s;
+    border-radius: 5px;
+}
+
+.wb-header nav a:hover{
+    background: rgb(0,0,0,.5);
+}
+
+.wb-header li + li {
+    margin-left: 10px;    
 }
 
 .wb-content {
