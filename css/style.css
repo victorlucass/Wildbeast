@@ -8,7 +8,9 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
+    border-radius: 5px;
 }
 
 
@@ -32,6 +34,7 @@ a {
         ;
 }
 
+/*Header*/
 
 .wb-header {
     grid-area: header;
@@ -69,23 +72,79 @@ a {
     margin-left: 10px;    
 }
 
+/*Sidenav*/
+
 .wb-sidenav {
     grid-area: sidenav;
     padding: 30px;
     background: #fafbfc;
 }
 
+.wb-sidenav a {
+    display: block;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgb(44,44,44,0.15);
+    background: white;
+    transition: .1s ease-out;
+    max-width: 100px;
+    min-width: 60px;
+}
+
+.wb-sidenav a:hover {
+    background: #B07DFB;
+}
+
+/*Content*/
+
 .wb-content {
     grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
 }
+
+.col-wide {
+    grid-column: 1 / -1;
+}
+
+.span-2 {
+    grid-row: span 2;
+    align-self: end;
+}
+
+.item-2 {
+    align-self: end;
+}
+
+/*Adverts*/
 
 .wb-adverts {
     grid-area: adverts;
+    background: #fafbfc;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    grid-gap: 30px;
 }
+
+/*Footer*/
 
 .wb-footer {
     grid-area: footer;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.wb-footer p {
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 /*fafbfc*/
-/*b-s: 5px 5px 15px 0px rgb(44,44,44,0.15)*/
+/*b-s: */
