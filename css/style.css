@@ -69,6 +69,12 @@ a {
     margin-left: 10px;    
 }
 
+.wb-sidenav {
+    grid-area: sidenav;
+    padding: 30px;
+    background: #fafbfc;
+}
+
 .wb-content {
     grid-area: content;
 }
@@ -81,3 +87,5 @@ a {
     grid-area: footer;
 }
 
+/*fafbfc*/
+/*b-s: 5px 5px 15px 0px rgb(44,44,44,0.15)*/
