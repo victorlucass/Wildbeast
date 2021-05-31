@@ -149,6 +149,7 @@ p{
 
 .wb-character {
     display: flex;
+    align-items: flex-start;
 }
 
 .wb-character > div {
@@ -156,16 +157,32 @@ p{
     background: linear-gradient(135deg, #8844ee, #B07DFB);
     border-radius: 5px;
     text-align: center; 
+    box-shadow: 5px 5px  15px 0px rgb(44,44,44,0.15);
+    position: relative;
 }
 
 .wb-character div + div {
     margin-left: 30px;
 }
 
+.wb-character span {
+    display: block;
+    color: #B07DFB;
+}
+
 .wb-number {
-    color:  #B07DFB;
     font-size: 3rem;
     line-height: 1;
+    margin: 10px auto;
+}
+
+.wb-label {
+    display: block;
+    background: white;
+    border-radius: 0 0 5px 5px;  
+    padding: 5px;
+    position: relative;
+    top: 2px;
 }
 
 /*Adverts*/
