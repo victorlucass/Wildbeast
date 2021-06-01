@@ -41,6 +41,30 @@ p{
         ;
 }
 
+@media (max-width:1200px){
+    .wb-container {
+        grid-template-areas: 
+            "header header header"
+            "sidenav content content"
+            "sidenav adverts adverts"
+            "footer footer footer"
+            ;
+    }
+}
+
+@media (max-width: 760px) {
+    .wb-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "sidenav"
+            "content"
+            "adverts"
+            "footer"
+            ;
+    }
+}
+
 /*Header*/
 
 .wb-header {
@@ -79,6 +103,22 @@ p{
     margin-left: 10px;    
 }
 
+
+@media (max-width: 760px){
+    .wb-header {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+    .wb-header nav ul li a {
+        font-size: 1rem;
+    }
+    
+    .wb-header nav li + li {
+        margin-left: 10px;
+    }
+    
+}
+
 /*Sidenav*/
 
 .wb-sidenav {
@@ -101,6 +141,51 @@ p{
 
 .wb-sidenav a:hover {
     background: #B07DFB;
+}
+
+@keyframes seta{
+    from {
+        right: 30px;
+    }
+    
+    to {
+        right: 20px;
+    }
+    
+}
+
+@media (max-width: 760px){
+    .wb-sidenav {
+        overflow-x: auto; /* Faz o scroll na horizontal */
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        position: relative;
+    }
+    
+    .wb-sidenav::after {
+        content: '→';
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0,0,0, .3);
+        animation: seta .5s ease-in 0s infinite alternate;
+        /* animação/velocidade/modo-de-animar/instante pra começar/infinite altenate(ir e voltar)*/
+    }
+    
+    .wb-sidenav ul {
+        display: flex;
+    }
+    .wb-sidenav ul li {
+        flex: 1 0 60px;
+    }
+    .wb-sidenav {
+        padding: 0 30px;
+    }
+    
+    .wb-sidenav ul li a {
+        margin: 30px 30px 30px 0;
+    }
+     
 }
 
 /*Content*/
@@ -183,6 +268,39 @@ p{
     padding: 5px;
     position: relative;
     top: 2px;
+}
+
+.wb-spotlight {
+    color: #B07DFB;
+    font-size: 0.875rem;
+    max-width: 16rem;
+}
+
+.quote, .wb-attributes{
+    align-self: start;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgb(44,44,44, 0.15);
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    color: white;
+    text-align: center;
+}
+
+.quote p{
+    color: white;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.wb-attributes li {
+    font-family: Courier, monospace;
+    font-size: 1.125rem;
+    padding: 15px;
+}
+
+.wb-attributes li + li {
+    border-top: 2px solid #B07DFB;
+    color: white;
 }
 
 /*Adverts*/
