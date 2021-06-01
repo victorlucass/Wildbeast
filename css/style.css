@@ -9,7 +9,7 @@ body {
 
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -198,6 +198,12 @@ p{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+}
+
+@media (max-width: 600px) {
+    .wb-container {
+        grid-template-columns: auto;
+    }
 }
 
 .col-wide {
