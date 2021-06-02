@@ -201,7 +201,7 @@ p{
 }
 
 @media (max-width: 600px) {
-    .wb-container {
+    .wb-content {
         grid-template-columns: auto;
     }
 }
@@ -317,7 +317,11 @@ p{
     display: grid;
     align-content: start;
     padding: 30px;
-    grid-gap: 30px;
+    grid-gap: 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /*O 'auto-fit' ele cria colunas automaticamente conforme o tamanho do conteúdo
+        e o minmax();
+    */
 }
 
 /*Footer*/
